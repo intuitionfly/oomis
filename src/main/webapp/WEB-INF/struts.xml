@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<constant name="struts.custom.i18n.resources" value="messageResources" />
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.convention.result.path" value="/jsp/" />
+	<constant name="struts.action.extension" value="action" />
+	<bean type="com.opensymphony.xwork2.UnknownHandler" name="tilesUnknownHandler" class="com.oomis.util.TilesUnknownHandler"/>
+	
+	<package name="oomis" extends="convention-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+		</result-types>
+		<interceptors>
+			<interceptor-stack name="appDefaultStack">
+				<interceptor-ref name="paramsPrepareParamsStack">
+					<param name="exception.logEnabled">true</param>
+					<param name="exception.logLevel">ERROR</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="appDefaultStack" />
+		
+		<global-results>
+			<result name="error">/jsp/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception" result="error" />
+		</global-exception-mappings>
+
+		<!-- <action name="signon" class="com.oomis.action.SignonAction">  
+            <interceptor-ref name="paramsPrepareParamsStack" />
+            <result>signon</result>  
+        </action> -->
+	</package>
+</struts>

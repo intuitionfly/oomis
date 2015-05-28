@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans.xsd 
+ http://www.springframework.org/schema/tx 
+ http://www.springframework.org/schema/tx/spring-tx.xsd 
+ http://www.springframework.org/schema/jee
+ http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+ http://www.springframework.org/schema/aop 
+ http://www.springframework.org/schema/aop/spring-aop.xsd ">
+	<!-- enable spring aop
+	<aop:aspectj-autoproxy />
+
+	<aop:config>
+		<aop:aspect id="TestAspect" ref="aspectBean">
+			<aop:pointcut id="businessService"
+				expression="execution(* com.oomis.action.*Action.*(..))" />
+			<aop:before pointcut-ref="businessService" method="doBefore" />
+			<aop:after pointcut-ref="businessService" method="doAfter" />
+			<aop:around pointcut-ref="businessService" method="doAround" />
+			<aop:after-throwing pointcut-ref="businessService"
+				method="doThrowing" throwing="ex" />
+		</aop:aspect>
+	</aop:config>
+
+	<bean id="aspectBean" class="com.oomis.test.TestAspect" /> -->
+
+	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/mysql" />
+	
+	<!-- <bean id="personService" class="com.oomis.service.PersonService" >
+		<property name = "dataSource" ref="dataSource"/>
+	</bean>
+	
+	<bean id="signonAction" class="com.oomis.action.SignonAction">
+		<property name = "personService" ref="personService"/>
+	</bean> -->
+
+</beans>
