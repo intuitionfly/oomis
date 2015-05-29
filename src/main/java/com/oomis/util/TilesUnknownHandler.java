@@ -27,6 +27,7 @@ public class TilesUnknownHandler extends ConventionUnknownHandler {
 			@Inject("struts.convention.action.name.separator") String nameSeparator) {
 		super(configuration, objectFactory, servletContext, container,
 				defaultParentPackageName, redirectToSlash, nameSeparator);
+		System.out.println("TilesHandler");
 	}
 
 	@Override

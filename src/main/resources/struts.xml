@@ -8,6 +8,7 @@
 	<constant name="struts.i18n.encoding" value="UTF-8"/>
 	<constant name="struts.custom.i18n.resources" value="messageResources" />
 	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.convention.default.parent.package" value="oomis" />
 	<constant name="struts.convention.result.path" value="/jsp/" />
 	<constant name="struts.action.extension" value="action" />
 	<bean type="com.opensymphony.xwork2.UnknownHandler" name="tilesUnknownHandler" class="com.oomis.util.TilesUnknownHandler"/>
@@ -35,7 +36,7 @@
 
 		<!-- <action name="signon" class="com.oomis.action.SignonAction">  
             <interceptor-ref name="paramsPrepareParamsStack" />
-            <result>signon</result>  
+            <result>signon</result>
         </action> -->
 	</package>
 </struts>

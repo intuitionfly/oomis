@@ -30,6 +30,8 @@
 
 	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/mysql" />
 	
+	<bean id="welcomeAction" class="com.oomis.action.WelcomeAction" />
+	
 	<!-- <bean id="personService" class="com.oomis.service.PersonService" >
 		<property name = "dataSource" ref="dataSource"/>
 	</bean>

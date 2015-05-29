@@ -3,7 +3,7 @@
 <html>
 <body>
 <script type="text/javascript">
-	//window.location.href = "signon.action";
+	window.location.href = "welcome.action";
 </script>
 </body>
 </html>

@@ -3,13 +3,7 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
-	<definition></definition>
-  <!-- <definition name="signon" template="/jsp/template/template.jsp">
-    <put-attribute name="header" value="/jsp/tiles/header.jsp" />
-    <put-attribute name="body" value="/jsp/tiles/home_body.jsp" />
-    <put-attribute name="footer" value="/jsp/tiles/footer.jsp" />
-  </definition>
-  
-  <definition name="save.fail" extends="signon" /> -->
+	<definition name="welcome" template="/jsp/template.jsp"></definition>
+	<definition name="save.fail" extends="welcome"></definition>
 </tiles-definitions>
 
