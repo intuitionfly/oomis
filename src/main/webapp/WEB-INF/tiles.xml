@@ -3,7 +3,10 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
-	<definition name="welcome" template="/jsp/template.jsp"></definition>
+	<definition name="welcome" template="/jsp/template/main.jsp">
+		<put-attribute name="navbar" value="/jsp/template/navbar.jsp"/>
+		<put-attribute name="body" value="/jsp/template/body.jsp"/>
+	</definition>
 	<definition name="save.fail" extends="welcome"></definition>
 </tiles-definitions>
 
